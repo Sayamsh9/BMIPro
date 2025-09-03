@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator | Comprehensive Body Metrics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .custom-rounded {
+            border-radius: 20px;
+        }
+        .ad-container {
+            background-color: #f3f4f6;
+            border: 1px dashed #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-2">BMI & Body Metrics Calculator</h1>
+            <p class="text-lg text-gray-600">Comprehensive health assessment with multiple calculation methods</p>
+        </header>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+                <div class="bg-white p-8 custom-rounded shadow-lg mb-8">
+                    <h2 class="text-2xl font-semibold text-indigo-700 mb-6">Basic BMI Calculator</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Gender</label>
+                            <select id="gender-select" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Age</label>
+                            <input type="number" id="age-input" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Height (cm)</label>
+                            <input type="number" id="height-input" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Weight (kg)</label>
+                            <input type="number" id="weight-input" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Waist (cm)</label>
+                            <input type="number" id="waist-input" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Neck (cm)</label>
+                            <input type="number" id="neck-input" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div id="hip-input-container" class="hidden">
+                            <label class="block text-gray-700 mb-2">Hip (cm)</label>
+                            <input type="number" id="hip-input" class="w-full px-4 py-3 custom-rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="flex items-end">
+                            <button id="calculate-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 custom-rounded transition duration-300">
+                                Calculate Metrics
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 custom-rounded shadow-lg">
+                    <h2 class="text-2xl font-semibold text-indigo-700 mb-6">Calculation Results</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-blue-50 p-4 custom-rounded">
+                            <h3 class="font-medium text-blue-800">Standard BMI</h3>
+                            <p id="bmi-result" class="text-3xl font-bold text-blue-600">--</p>
+                            <p id="bmi-category" class="text-sm text-blue-500">Enter values to calculate</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 custom-rounded">
+                            <h3 class="font-medium text-purple-800">Body Fat Percentage</h3>
+                            <p id="body-fat-result" class="text-3xl font-bold text-purple-600">--</p>
+                            <p class="text-sm text-purple-500">Calculated via U.S. Navy Method</p>
+                        </div>
+                        <div class="bg-green-50 p-4 custom-rounded">
+                            <h3 class="font-medium text-green-800">Waist-to-Height</h3>
+                            <p id="whtr-result" class="text-3xl font-bold text-green-600">--</p>
+                            <p class="text-sm text-green-500">Healthy ratio</p>
+                        </div>
+                    </div>
+
+                    <a href="age-comparison.html" class="inline-flex items-center justify-center w-full bg-indigo-100 hover:bg-indigo-200 text-indigo-800 py-3 px-6 custom-rounded transition duration-300">
+                        <i data-feather="bar-chart-2" class="mr-2"></i> View Age Comparison Table
+                    </a>
+                </div>
+
+                <div class="ad-container h-32 mt-8 custom-rounded flex items-center justify-center">
+                    <p class="text-gray-500">Advertisement</p>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-64">
+                <div class="ad-container h-full custom-rounded flex items-center justify-center">
+                    <p class="text-gray-500">Advertisement</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        feather.replace();
+
+        // The core function to calculate and display all body metrics
+        function calculateAndDisplayMetrics() {
+            const genderSelect = document.getElementById('gender-select');
+            const heightInput = document.getElementById('height-input');
+            const weightInput = document.getElementById('weight-input');
+            const waistInput = document.getElementById('waist-input');
+            const neckInput = document.getElementById('neck-input');
+            const hipInput = document.getElementById('hip-input');
+
+            const bmiResultElement = document.getElementById('bmi-result');
+            const bmiCategoryElement = document.getElementById('bmi-category');
+            const bodyFatResultElement = document.getElementById('body-fat-result');
+            const whtrResultElement = document.getElementById('whtr-result');
+
+            const gender = genderSelect.value;
+            const heightCm = parseFloat(heightInput.value);
+            const weightKg = parseFloat(weightInput.value);
+            const waistCm = parseFloat(waistInput.value);
+            const neckCm = parseFloat(neckInput.value);
+            const hipCm = parseFloat(hipInput.value);
+
+            // Simple validation for core inputs
+            if (isNaN(heightCm) || isNaN(weightKg) || heightCm <= 0 || weightKg <= 0) {
+                bmiResultElement.textContent = 'Invalid';
+                bmiCategoryElement.textContent = 'Please enter valid height and weight.';
+                bodyFatResultElement.textContent = '--';
+                whtrResultElement.textContent = '--';
+                return;
+            }
+
+            // 1. BMI Calculation
+            const heightM = heightCm / 100;
+            const bmi = weightKg / (heightM * heightM);
+            bmiResultElement.textContent = bmi.toFixed(2);
+            let bmiCategory = '';
+            if (bmi < 18.5) {
+                bmiCategory = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                bmiCategory = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                bmiCategory = 'Overweight';
+            } else {
+                bmiCategory = 'Obese';
+            }
+            bmiCategoryElement.textContent = bmiCategory;
+
+            // 2. Waist-to-Height Ratio (WtHR) Calculation
+            if (!isNaN(waistCm) && waistCm > 0) {
+                const whtr = waistCm / heightCm;
+                whtrResultElement.textContent = whtr.toFixed(2);
+            } else {
+                whtrResultElement.textContent = '--';
+            }
+
+            // 3. Body Fat Percentage (U.S. Navy Method)
+            if (!isNaN(waistCm) && !isNaN(neckCm) && waistCm > 0 && neckCm > 0) {
+                let bodyFat;
+                if (gender === 'male') {
+                    bodyFat = 495 / (1.0324 - 0.19077 * Math.log10(waistCm - neckCm) + 0.15456 * Math.log10(heightCm)) - 450;
+                } else { // Female
+                    if (isNaN(hipCm) || hipCm <= 0) {
+                        bodyFatResultElement.textContent = 'N/A';
+                        return;
+                    }
+                    bodyFat = 495 / (1.29579 - 0.35004 * Math.log10(waistCm + hipCm - neckCm) + 0.22100 * Math.log10(heightCm)) - 450;
+                }
+                bodyFatResultElement.textContent = `${bodyFat.toFixed(1)}%`;
+            } else {
+                bodyFatResultElement.textContent = '--';
+            }
+        }
+
+        // Add a listener to show/hide the hip input based on gender
+        document.getElementById('gender-select').addEventListener('change', (event) => {
+            const hipInputContainer = document.getElementById('hip-input-container');
+            if (event.target.value === 'female') {
+                hipInputContainer.classList.remove('hidden');
+            } else {
+                hipInputContainer.classList.add('hidden');
+            }
+        });
+
+        // Attach the main function to the button's click event
+        document.getElementById('calculate-btn').addEventListener('click', calculateAndDisplayMetrics);
+    </script>
+</body>
+</html>
