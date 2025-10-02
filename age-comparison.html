@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Age Comparison | Body Metrics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .custom-rounded {
+            border-radius: 20px;
+        }
+        .ad-container {
+            background-color: #f3f4f6;
+            border: 1px dashed #d1d5db;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-2">BMI Age Comparison</h1>
+            <p class="text-lg text-gray-600">See how your BMI compares to average values by age</p>
+        </header>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8244980132786136"
+     crossorigin="anonymous"></script>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <div class="flex-1">
+                <div class="bg-white p-8 custom-rounded shadow-lg">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-semibold text-indigo-700">Average BMI by Age Group</h2>
+                        <a href="index.html" class="flex items-center text-indigo-600 hover:text-indigo-800">
+                            <i data-feather="arrow-left" class="mr-2"></i> Back to Calculator
+                        </a>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-indigo-50 text-indigo-700">
+                                <tr>
+                                    <th class="px-6 py-3 custom-rounded-l">Age Group</th>
+                                    <th class="px-6 py-3">Average BMI (Men)</th>
+                                    <th class="px-6 py-3">Average BMI (Women)</th>
+                                    <th class="px-6 py-3 custom-rounded-r">Healthy Range</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4">18-24</td>
+                                    <td class="px-6 py-4">22.5</td>
+                                    <td class="px-6 py-4">21.8</td>
+                                    <td class="px-6 py-4">18.5-24.9</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4">25-34</td>
+                                    <td class="px-6 py-4">24.1</td>
+                                    <td class="px-6 py-4">23.6</td>
+                                    <td class="px-6 py-4">18.5-24.9</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">35-44</td>
+                                    <td class="px-6 py-4">25.8</td>
+                                    <td class="px-6 py-4">25.2</td>
+                                    <td class="px-6 py-4">18.5-24.9</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4">45-54</td>
+                                    <td class="px-6 py-4">26.4</td>
+                                    <td class="px-6 py-4">26.8</td>
+                                    <td class="px-6 py-4">18.5-24.9</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4">55-64</td>
+                                    <td class="px-6 py-4">27.1</td>
+                                    <td class="px-6 py-4">27.5</td>
+                                    <td class="px-6 py-4">18.5-24.9</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4">65+</td>
+                                    <td class="px-6 py-4">26.8</td>
+                                    <td class="px-6 py-4">27.3</td>
+                                    <td class="px-6 py-4">23-29.9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-8 bg-blue-50 p-4 custom-rounded">
+                        <h3 class="font-medium text-blue-800 mb-2">Your BMI: 24.5</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-blue-600 h-4 rounded-full" style="width: 65%"></div>
+                        </div>
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8244980132786136"
+     crossorigin="anonymous"></script>
+                        <div class="flex justify-between text-xs text-gray-600 mt-1">
+                            <span>Underweight (<18.5)</span>
+                            <span>Normal (18.5-24.9)</span>
+                            <span>Overweight (25-29.9)</span>
+                            <span>Obese (30+)</span>
+                        </div>
+                    </div>
+                </div>
+
+           
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
+
